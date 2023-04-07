@@ -8,7 +8,7 @@
  */
 int verify(int i, int j)
 {
-	if (j == 1)
+	if (i % j == 0 && j > 0)
 		return (0);
 	if (i > j / 2)
 		return (1);
