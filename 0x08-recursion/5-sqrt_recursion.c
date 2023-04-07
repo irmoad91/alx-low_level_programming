@@ -17,11 +17,11 @@ int verify(int i, int j)
 /**
  * _sqrt_recursion - function that returns the natural square root of a number
  * @n: calculate the sqr root
- * Return: return the result
+ * Return: return the natural sqr root / -1
  */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	return (verify(n, 0));
+	if (n == 0)
+		return (0);
+	return (verify(1, n));
 }
