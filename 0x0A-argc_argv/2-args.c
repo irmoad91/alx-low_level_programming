@@ -6,7 +6,7 @@
  * @argc: number of arg
  * Return: return to 0
  */
-int main(char *argv[], int argc)
+int main(int argc, char *argv[])
 {
 	int a;
 
