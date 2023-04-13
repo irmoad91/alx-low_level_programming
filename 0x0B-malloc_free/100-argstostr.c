@@ -7,7 +7,7 @@
  * @av: array of arg
  * Return: Returns a pointer to a new string, or NULL if it fails
  */
-char *argstostr(int ac, char **av);
+char *argstostr(int ac, char **av)
 {
 	int a;
 	int b;
