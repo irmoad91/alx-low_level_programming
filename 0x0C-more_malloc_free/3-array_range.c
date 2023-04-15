@@ -10,6 +10,7 @@
 int *array_range(int min, int max)
 {
 	int *p;
+	int a;
 	int sz;
 
 	if (min > max)
