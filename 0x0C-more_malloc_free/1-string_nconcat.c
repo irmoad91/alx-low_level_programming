@@ -14,31 +14,39 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int a = 0, b = 0;
 	unsigned int lentgh1 = 0, lentgh2 = 0;
 
-	if (s1 == NULL)
+	while (s1 && s1[lentgh1])
 	{
-		s1 = "";
-	}
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
-	for (lentgh1 = 0; s1[lentgh1] != '\0')
 		lentgh1++;
-	for (lentgh2 = 0; s2[lentgh2] != '\0')
+	}
+	while (s2 && s2[lentgh2])
+	{
 		lentgh2++;
-	strg = malloc(lentgh1 + n + 1);
-	if (strg == NULL)
+	}
+	if (n < lentgh2)
+	{
+		strg = malloc(sizeof(char) * (lentgh1 + n + 1));
+	}
+	else
+	{
+		strg = malloc(sizeof(char) * (lentgh1 + lentgh2 + 1));
+	}
+	if (!strg)
 	{
 		return (NULL);
 	}
-	for (a = 0; s1[a] != '\0'; a++)
-		strg[a] = s1[a];
-	for (b = 0; b < n; b++)
+	while (a < lentgh1)
 	{
-		strg[a] = s2[b];
+		strg[a] = s1[a];
 		a++;
+	}
+	while (n < lentgh2 && a < (lentgh1 + n))
+	{
+		strg[a++] = s2[b++];
+	}
+	while (n >= lentgh2 && a < (lentgh1 + lentgh2))
+	{
+		strg[a++] = s2[b++];
 	}
 	strg[a] = '\0';
 	return (strg);
 }
-
