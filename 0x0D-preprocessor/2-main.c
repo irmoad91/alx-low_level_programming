@@ -4,8 +4,8 @@
  * main - prints the name of the file it was compiled from
  * Return: return to 0
  */
-int main()
+int main(void)
 {
 	printf("%s\n", __FILE__);
-	return 0;
+	return (0);
 }
