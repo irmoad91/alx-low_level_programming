@@ -3,7 +3,7 @@
 
 /**
  * array_iterator - a function that executes a function given as a parameter
- * @array: array 
+ * @array: array
  * @size: size of array
  * @action: function ptr
  * Return: void
