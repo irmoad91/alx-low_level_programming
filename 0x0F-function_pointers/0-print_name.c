@@ -7,7 +7,7 @@
  * @f: function ptr
  * Return: void
  */
-oid print_name(char *name, void (*f)(char *))
+void print_name(char *name, void (*f)(char *))
 {
 	if (name && f)
 	{
