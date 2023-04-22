@@ -28,10 +28,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	if (op == '+' && op == '-' && op == '*' && op == '/' && op == '%')
+	if (op != '+' && op != '-' && op != '*' && op != '/' && op != '%')
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
 	printf("%d\n", get_op_func(argv[2])(num1, num2));
 	return (0);
