@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1 = 0, num2 = 0 result = 0;
+	int num1 = 0, num2 = 0, result = 0;
 	char op;
 
 	if (argc != 4)
