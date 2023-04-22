@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	if (op == '+' && op == '-' && op == '*' && op == '/' && op '%')
+	if (op == '+' && op == '-' && op == '*' && op == '/' && op == '%')
 	{
 		printf("Error\n");
 		exit(100);
