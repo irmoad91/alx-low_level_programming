@@ -3,9 +3,9 @@ section .data
     len equ $-message ; length of the message
 
 section .text
-    global _start
+    global main
     
-_start:
+main:
     ; write the message to stdout
     mov eax, 4          ; write syscall number
     mov ebx, 1          ; file descriptor for stdout
